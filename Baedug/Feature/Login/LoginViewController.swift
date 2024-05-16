@@ -64,7 +64,6 @@ extension LoginViewController {
             make.height.equalTo(30)
             make.center.equalToSuperview()
         }
-        self.loadingIndicator.startAnimating()
     }
 }
 //MARK: - Binding
@@ -110,7 +109,6 @@ extension LoginViewController : ASAuthorizationControllerDelegate, ASAuthorizati
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        self.loadingIndicator.stopAnimating()
         print("Apple Sign In Error: \(error.localizedDescription)")
     }
 }

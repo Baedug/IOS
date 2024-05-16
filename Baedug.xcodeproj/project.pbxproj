@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		E411D4DF2B9B064F00A3A9FA /* AppleLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E411D4DE2B9B064F00A3A9FA /* AppleLoginService.swift */; };
 		E4480C602BA1BB87007119B1 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4480C5F2BA1BB87007119B1 /* LoginModel.swift */; };
+		E4B1E6A82BF5C4F900ECADFA /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1E6A72BF5C4F900ECADFA /* Network.swift */; };
+		E4B1E6AB2BF5C52A00ECADFA /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E4B1E6AA2BF5C52A00ECADFA /* RxAlamofire */; };
+		E4B1E6AD2BF5C6FC00ECADFA /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1E6AC2BF5C6FC00ECADFA /* NetworkProvider.swift */; };
+		E4B1E6B22BF5C81000ECADFA /* PostDirectoryRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1E6B12BF5C81000ECADFA /* PostDirectoryRequestModel.swift */; };
+		E4B1E6B52BF5C8CC00ECADFA /* PostDirectoryNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1E6B42BF5C8CC00ECADFA /* PostDirectoryNetwork.swift */; };
 		E4D402202BB5668C00B4E5C4 /* ChatGPTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D4021F2BB5668C00B4E5C4 /* ChatGPTService.swift */; };
 		E4D402242BB679F700B4E5C4 /* ApiKeyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4D402232BB679F700B4E5C4 /* ApiKeyList.plist */; };
 		E4D402262BB67A4C00B4E5C4 /* HIDEAPIKEY++Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D402252BB67A4C00B4E5C4 /* HIDEAPIKEY++Bundle.swift */; };
@@ -56,6 +61,10 @@
 /* Begin PBXFileReference section */
 		E411D4DE2B9B064F00A3A9FA /* AppleLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginService.swift; sourceTree = "<group>"; };
 		E4480C5F2BA1BB87007119B1 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		E4B1E6A72BF5C4F900ECADFA /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		E4B1E6AC2BF5C6FC00ECADFA /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		E4B1E6B12BF5C81000ECADFA /* PostDirectoryRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDirectoryRequestModel.swift; sourceTree = "<group>"; };
+		E4B1E6B42BF5C8CC00ECADFA /* PostDirectoryNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDirectoryNetwork.swift; sourceTree = "<group>"; };
 		E4D4021F2BB5668C00B4E5C4 /* ChatGPTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatGPTService.swift; sourceTree = "<group>"; };
 		E4D402232BB679F700B4E5C4 /* ApiKeyList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKeyList.plist; sourceTree = "<group>"; };
 		E4D402252BB67A4C00B4E5C4 /* HIDEAPIKEY++Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HIDEAPIKEY++Bundle.swift"; sourceTree = "<group>"; };
@@ -107,6 +116,7 @@
 				E4FF8DF92B945A7300FDBF85 /* SwiftKeychainWrapper in Frameworks */,
 				E4FF8DEF2B945A5A00FDBF85 /* RxCocoa in Frameworks */,
 				E4FF8DF32B945A5A00FDBF85 /* RxSwift in Frameworks */,
+				E4B1E6AB2BF5C52A00ECADFA /* RxAlamofire in Frameworks */,
 				E4FF8DEC2B945A4C00FDBF85 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +147,38 @@
 				E4D402282BB68A1800B4E5C4 /* LoginServiceModel.swift */,
 			);
 			path = LoginModel;
+			sourceTree = "<group>";
+		};
+		E4B1E6AE2BF5C7CB00ECADFA /* Directory */ = {
+			isa = PBXGroup;
+			children = (
+				E4B1E6B02BF5C7D900ECADFA /* Response */,
+				E4B1E6AF2BF5C7D300ECADFA /* Request */,
+			);
+			path = Directory;
+			sourceTree = "<group>";
+		};
+		E4B1E6AF2BF5C7D300ECADFA /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				E4B1E6B12BF5C81000ECADFA /* PostDirectoryRequestModel.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		E4B1E6B02BF5C7D900ECADFA /* Response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		E4B1E6B32BF5C8BE00ECADFA /* Directory */ = {
+			isa = PBXGroup;
+			children = (
+				E4B1E6B42BF5C8CC00ECADFA /* PostDirectoryNetwork.swift */,
+			);
+			path = Directory;
 			sourceTree = "<group>";
 		};
 		E4D402272BB67A5100B4E5C4 /* Key */ = {
@@ -324,6 +366,7 @@
 		E4FF8DE72B94579B00FDBF85 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E4B1E6AE2BF5C7CB00ECADFA /* Directory */,
 				E4480C5E2BA1BB77007119B1 /* LoginModel */,
 				E4E67CFD2B95DCC90031DA82 /* List */,
 				E4E67CF42B95D6580031DA82 /* Chat */,
@@ -335,6 +378,9 @@
 		E4FF8DE82B94579F00FDBF85 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				E4B1E6A72BF5C4F900ECADFA /* Network.swift */,
+				E4B1E6AC2BF5C6FC00ECADFA /* NetworkProvider.swift */,
+				E4B1E6B32BF5C8BE00ECADFA /* Directory */,
 				E411D4DD2B9B060000A3A9FA /* Login */,
 				E411D4DC2B9B05F300A3A9FA /* ChatGPT */,
 			);
@@ -392,6 +438,7 @@
 				E4FF8DF22B945A5A00FDBF85 /* RxSwift */,
 				E4FF8DF52B945A6900FDBF85 /* Alamofire */,
 				E4FF8DF82B945A7300FDBF85 /* SwiftKeychainWrapper */,
+				E4B1E6AA2BF5C52A00ECADFA /* RxAlamofire */,
 			);
 			productName = Baedug;
 			productReference = E4FF8DCA2B9455F700FDBF85 /* Baedug.app */;
@@ -426,6 +473,7 @@
 				E4FF8DED2B945A5A00FDBF85 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				E4FF8DF42B945A6900FDBF85 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				E4FF8DF72B945A7300FDBF85 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+				E4B1E6A92BF5C52A00ECADFA /* XCRemoteSwiftPackageReference "RxAlamofire" */,
 			);
 			productRefGroup = E4FF8DCB2B9455F700FDBF85 /* Products */;
 			projectDirPath = "";
@@ -460,11 +508,14 @@
 				E4E67D1E2B96E5620031DA82 /* ChatServiceModel.swift in Sources */,
 				E4E67CF92B95DC9F0031DA82 /* ListViewController.swift in Sources */,
 				E4E67CFF2B95DCD30031DA82 /* ListModel.swift in Sources */,
+				E4B1E6A82BF5C4F900ECADFA /* Network.swift in Sources */,
+				E4B1E6B52BF5C8CC00ECADFA /* PostDirectoryNetwork.swift in Sources */,
 				E4E67D0D2B95E3BE0031DA82 /* ListDetailViewModel.swift in Sources */,
 				E4E67CEE2B95B4830031DA82 /* TabBarViewModel.swift in Sources */,
 				E4FF8DFC2B945B0800FDBF85 /* LoginViewController.swift in Sources */,
 				E4FF8E032B945FC400FDBF85 /* Color+Extension.swift in Sources */,
 				E4D402262BB67A4C00B4E5C4 /* HIDEAPIKEY++Bundle.swift in Sources */,
+				E4B1E6B22BF5C81000ECADFA /* PostDirectoryRequestModel.swift in Sources */,
 				E4FF8E052B9466BB00FDBF85 /* MainTableViewCell.swift in Sources */,
 				E4FF8DD22B9455F700FDBF85 /* MainViewController.swift in Sources */,
 				E4E67CEC2B95B47A0031DA82 /* TabBarViewController.swift in Sources */,
@@ -480,6 +531,7 @@
 				E4E67CE72B95A2810031DA82 /* MainDetailViewController.swift in Sources */,
 				E4480C602BA1BB87007119B1 /* LoginModel.swift in Sources */,
 				E4E67CF12B95D44A0031DA82 /* ChatViewController.swift in Sources */,
+				E4B1E6AD2BF5C6FC00ECADFA /* NetworkProvider.swift in Sources */,
 				E4E67CF62B95D6630031DA82 /* ChatModel.swift in Sources */,
 				E4FF8DFE2B945D5C00FDBF85 /* LoginViewModel.swift in Sources */,
 				E4E67D0B2B95E3B50031DA82 /* ListDetailViewController.swift in Sources */,
@@ -702,6 +754,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E4B1E6A92BF5C52A00ECADFA /* XCRemoteSwiftPackageReference "RxAlamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxAlamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		E4FF8DEA2B945A4C00FDBF85 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -737,6 +797,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E4B1E6AA2BF5C52A00ECADFA /* RxAlamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4B1E6A92BF5C52A00ECADFA /* XCRemoteSwiftPackageReference "RxAlamofire" */;
+			productName = RxAlamofire;
+		};
 		E4FF8DEB2B945A4C00FDBF85 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E4FF8DEA2B945A4C00FDBF85 /* XCRemoteSwiftPackageReference "SnapKit" */;

@@ -84,7 +84,6 @@ extension ListViewController {
             make.height.equalTo(30)
             make.center.equalToSuperview()
         }
-        self.loadingIndicator.startAnimating()
     }
 }
 //MARK: - setBinding
