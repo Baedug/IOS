@@ -86,6 +86,8 @@ fastlane/test_output
 # Ignore ApiKeyList.plist and ChatGPTService.swift files
 Baedug/Core/Key/ApiKeyList.plist
 Baedug/Service/ChatGPT/ChatGPTService.swift
+ApiKeyList.plist
+ChatGPTService.swift
 
 iOSInjectionProject/
 
