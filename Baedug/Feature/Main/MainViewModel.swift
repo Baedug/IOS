@@ -11,22 +11,28 @@ import RxCocoa
 
 class MainViewModel {
     private let disposeBag = DisposeBag()
-    let InputTrigger = PublishRelay<Void>()
-    let MainTable : BehaviorRelay<[MainModel]> = BehaviorRelay(value: [])
+    private var getHeartNetwork : GetHeartNetwork
+    
+    //좋아요 리스트 조회
+    let InputTrigger = PublishSubject<Void>()
+    let MainTable : PublishSubject<[MainData]> = PublishSubject()
     
     init() {
+        let provider = NetworkProvider(endpoint: endpointURL)
+        getHeartNetwork = provider.getHeart()
+        
         setBinding()
     }
     private func setBinding() {
         InputTrigger.subscribe { _ in
-            let mockData = [
-                MainModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" ,day: "2024-02-29"),
-                MainModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" , day: "2024-03-01"),
-                MainModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" , day: "2024-03-02"),
-                MainModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" ,day: "2024-03-03")
-            ]
-            self.MainTable.accept(mockData)
+            self.getHeartNetwork.getHeartNetwork(path: getHeartURL)
+                .subscribe { result in
+                    if let data = result.body?.data {
+                        self.MainTable.onNext(data)
+                    }
+                }.disposed(by: self.disposeBag)
         }
         .disposed(by: disposeBag)
+        
     }
 }

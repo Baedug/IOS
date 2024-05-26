@@ -7,6 +7,6 @@
 
 import Foundation
 struct LoginServiceModel : Codable {
-    let id : String
-    let result : String
+    let id : String?
+    let result : String?
 }

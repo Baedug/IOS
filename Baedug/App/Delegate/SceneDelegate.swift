@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SwiftKeychainWrapper
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -15,9 +15,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         guard let windowScene = (scene as? UIWindowScene) else {return}
         window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = LoginViewController()
-        let navigationController = UINavigationController(rootViewController: viewController)
-        window?.rootViewController = navigationController
+        if let _ = KeychainWrapper.standard.string(forKey: "JWTaccessToken") {
+            let viewController = LoginViewController()
+            let navigationController = UINavigationController(rootViewController: viewController)
+            window?.rootViewController = navigationController
+        }else{
+            let viewController = LoginViewController()
+            let navigationController = UINavigationController(rootViewController: viewController)
+            window?.rootViewController = navigationController
+        }
         window?.makeKeyAndVisible() //화면에 보이게끔
         window?.windowScene = windowScene
     }

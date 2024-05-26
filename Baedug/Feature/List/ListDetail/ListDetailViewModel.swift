@@ -11,25 +11,28 @@ import RxCocoa
 
 class ListDetailViewModel {
     private let disposeBag = DisposeBag()
-    let InputTrigger = PublishRelay<Void>()
-    let ListTable : BehaviorRelay<[ListModel]> = BehaviorRelay(value: [])
+    private var getDetailNetwork : GetDetailNetwork
     
+    //노트 조회
+    let noteListTrigger = PublishSubject<Int>()
+    let noteListResult : PublishSubject<[GetDetailData]> = PublishSubject()
     init() {
+        let provider = NetworkProvider(endpoint: endpointURL)
+        getDetailNetwork = provider.getDetail()
+        
         setBinding()
     }
     private func setBinding() {
-        InputTrigger.subscribe { _ in
-            let mockData = [
-                ListModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" ,day: "2024-02-29"),
-                ListModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" , day: "2024-03-01"),
-                ListModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" , day: "2024-03-02"),
-                ListModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" ,day: "2024-03-03"),
-                ListModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" ,day: "2024-03-03"),
-                ListModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" ,day: "2024-03-03"),
-                ListModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" ,day: "2024-03-03")
-            ]
-            self.ListTable.accept(mockData)
-        }
-        .disposed(by: disposeBag)
+        noteListTrigger.subscribe(onNext: {[weak self] id in
+            guard let self = self else {return}
+            self.getDetailNetwork.getDetailNetwork(path: "\(getDetailURL)\(id)/note")
+                .subscribe(onNext: {[weak self] result in
+                    guard let self = self else { return }
+                    if let data = result.body?.data {
+                        noteListResult.onNext(data)
+                    }
+                })
+                .disposed(by: self.disposeBag)
+        }).disposed(by: self.disposeBag)
     }
 }

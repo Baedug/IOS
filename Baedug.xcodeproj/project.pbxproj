@@ -9,17 +9,32 @@
 /* Begin PBXBuildFile section */
 		E411D4DF2B9B064F00A3A9FA /* AppleLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E411D4DE2B9B064F00A3A9FA /* AppleLoginService.swift */; };
 		E4480C602BA1BB87007119B1 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4480C5F2BA1BB87007119B1 /* LoginModel.swift */; };
+		E4713A6C2C0054CF0044F4C4 /* GetDirectoryNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4713A6B2C0054CF0044F4C4 /* GetDirectoryNetwork.swift */; };
+		E4713A6E2C0055530044F4C4 /* GetDirectoryResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4713A6D2C0055530044F4C4 /* GetDirectoryResponseModel.swift */; };
+		E4713A722C005EBF0044F4C4 /* GetHeartResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4713A712C005EBF0044F4C4 /* GetHeartResponseModel.swift */; };
+		E4713A742C005ECA0044F4C4 /* PostHeartResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4713A732C005ECA0044F4C4 /* PostHeartResponseModel.swift */; };
+		E4713A772C005FB30044F4C4 /* GetHeartNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4713A762C005FB30044F4C4 /* GetHeartNetwork.swift */; };
+		E4713A792C005FB90044F4C4 /* PostHeartNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4713A782C005FB90044F4C4 /* PostHeartNetwork.swift */; };
+		E4713A9E2C020BFF0044F4C4 /* AddNoteResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4713A9D2C020BFF0044F4C4 /* AddNoteResponseModel.swift */; };
+		E4713AA12C020C5A0044F4C4 /* PostNoteNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4713AA02C020C5A0044F4C4 /* PostNoteNetwork.swift */; };
+		E4713AA32C020C610044F4C4 /* GetNoteNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4713AA22C020C610044F4C4 /* GetNoteNetwork.swift */; };
+		E4713AA82C02FF3B0044F4C4 /* GetDetailNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4713AA72C02FF3B0044F4C4 /* GetDetailNetwork.swift */; };
+		E4713AAB2C02FF850044F4C4 /* GetDetailResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4713AAA2C02FF850044F4C4 /* GetDetailResponseModel.swift */; };
+		E4713AAD2C0302680044F4C4 /* ListDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4713AAC2C0302680044F4C4 /* ListDetailTableViewCell.swift */; };
 		E4B1E6A82BF5C4F900ECADFA /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1E6A72BF5C4F900ECADFA /* Network.swift */; };
 		E4B1E6AB2BF5C52A00ECADFA /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E4B1E6AA2BF5C52A00ECADFA /* RxAlamofire */; };
 		E4B1E6AD2BF5C6FC00ECADFA /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1E6AC2BF5C6FC00ECADFA /* NetworkProvider.swift */; };
 		E4B1E6B22BF5C81000ECADFA /* PostDirectoryRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1E6B12BF5C81000ECADFA /* PostDirectoryRequestModel.swift */; };
 		E4B1E6B52BF5C8CC00ECADFA /* PostDirectoryNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1E6B42BF5C8CC00ECADFA /* PostDirectoryNetwork.swift */; };
+		E4B1E6B72BF5D0CD00ECADFA /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1E6B62BF5D0CD00ECADFA /* URL.swift */; };
+		E4B1E6BF2BF5DC4000ECADFA /* BaedugUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1E6BE2BF5DC4000ECADFA /* BaedugUnitTests.swift */; };
+		E4B1E6CC2BF5DC4500ECADFA /* BaedugUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1E6CB2BF5DC4500ECADFA /* BaedugUITests.swift */; };
+		E4B1E6CE2BF5DC4500ECADFA /* BaedugUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B1E6CD2BF5DC4500ECADFA /* BaedugUITestsLaunchTests.swift */; };
 		E4D402202BB5668C00B4E5C4 /* ChatGPTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D4021F2BB5668C00B4E5C4 /* ChatGPTService.swift */; };
 		E4D402242BB679F700B4E5C4 /* ApiKeyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4D402232BB679F700B4E5C4 /* ApiKeyList.plist */; };
 		E4D402262BB67A4C00B4E5C4 /* HIDEAPIKEY++Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D402252BB67A4C00B4E5C4 /* HIDEAPIKEY++Bundle.swift */; };
 		E4D402292BB68A1800B4E5C4 /* LoginServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D402282BB68A1800B4E5C4 /* LoginServiceModel.swift */; };
 		E4E67CE72B95A2810031DA82 /* MainDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E67CE62B95A2810031DA82 /* MainDetailViewController.swift */; };
-		E4E67CE92B95A28B0031DA82 /* MainDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E67CE82B95A28B0031DA82 /* MainDetailViewModel.swift */; };
 		E4E67CEC2B95B47A0031DA82 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E67CEB2B95B47A0031DA82 /* TabBarViewController.swift */; };
 		E4E67CEE2B95B4830031DA82 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E67CED2B95B4830031DA82 /* TabBarViewModel.swift */; };
 		E4E67CF12B95D44A0031DA82 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E67CF02B95D44A0031DA82 /* ChatViewController.swift */; };
@@ -27,9 +42,7 @@
 		E4E67CF62B95D6630031DA82 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E67CF52B95D6630031DA82 /* ChatModel.swift */; };
 		E4E67CF92B95DC9F0031DA82 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E67CF82B95DC9F0031DA82 /* ListViewController.swift */; };
 		E4E67CFC2B95DCAC0031DA82 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E67CFB2B95DCAC0031DA82 /* ListViewModel.swift */; };
-		E4E67CFF2B95DCD30031DA82 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E67CFE2B95DCD30031DA82 /* ListModel.swift */; };
 		E4E67D012B95DD6A0031DA82 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E67D002B95DD6A0031DA82 /* ListTableViewCell.swift */; };
-		E4E67D092B95E09A0031DA82 /* AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E67D082B95E09A0031DA82 /* AddModel.swift */; };
 		E4E67D0B2B95E3B50031DA82 /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E67D0A2B95E3B50031DA82 /* ListDetailViewController.swift */; };
 		E4E67D0D2B95E3BE0031DA82 /* ListDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E67D0C2B95E3BE0031DA82 /* ListDetailViewModel.swift */; };
 		E4E67D102B95E60A0031DA82 /* DetailSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E67D0F2B95E60A0031DA82 /* DetailSelectViewController.swift */; };
@@ -58,19 +71,53 @@
 		E4FF8E082B9469AF00FDBF85 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FF8E072B9469AF00FDBF85 /* MainModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E4B1E6C02BF5DC4000ECADFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4FF8DC22B9455F700FDBF85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4FF8DC92B9455F700FDBF85;
+			remoteInfo = Baedug;
+		};
+		E4B1E6CF2BF5DC4500ECADFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4FF8DC22B9455F700FDBF85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4FF8DC92B9455F700FDBF85;
+			remoteInfo = Baedug;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		E411D4DE2B9B064F00A3A9FA /* AppleLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginService.swift; sourceTree = "<group>"; };
 		E4480C5F2BA1BB87007119B1 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		E4713A6B2C0054CF0044F4C4 /* GetDirectoryNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDirectoryNetwork.swift; sourceTree = "<group>"; };
+		E4713A6D2C0055530044F4C4 /* GetDirectoryResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDirectoryResponseModel.swift; sourceTree = "<group>"; };
+		E4713A712C005EBF0044F4C4 /* GetHeartResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeartResponseModel.swift; sourceTree = "<group>"; };
+		E4713A732C005ECA0044F4C4 /* PostHeartResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeartResponseModel.swift; sourceTree = "<group>"; };
+		E4713A762C005FB30044F4C4 /* GetHeartNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeartNetwork.swift; sourceTree = "<group>"; };
+		E4713A782C005FB90044F4C4 /* PostHeartNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeartNetwork.swift; sourceTree = "<group>"; };
+		E4713A9D2C020BFF0044F4C4 /* AddNoteResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteResponseModel.swift; sourceTree = "<group>"; };
+		E4713AA02C020C5A0044F4C4 /* PostNoteNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNoteNetwork.swift; sourceTree = "<group>"; };
+		E4713AA22C020C610044F4C4 /* GetNoteNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetNoteNetwork.swift; sourceTree = "<group>"; };
+		E4713AA72C02FF3B0044F4C4 /* GetDetailNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDetailNetwork.swift; sourceTree = "<group>"; };
+		E4713AAA2C02FF850044F4C4 /* GetDetailResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDetailResponseModel.swift; sourceTree = "<group>"; };
+		E4713AAC2C0302680044F4C4 /* ListDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailTableViewCell.swift; sourceTree = "<group>"; };
 		E4B1E6A72BF5C4F900ECADFA /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		E4B1E6AC2BF5C6FC00ECADFA /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		E4B1E6B12BF5C81000ECADFA /* PostDirectoryRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDirectoryRequestModel.swift; sourceTree = "<group>"; };
 		E4B1E6B42BF5C8CC00ECADFA /* PostDirectoryNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDirectoryNetwork.swift; sourceTree = "<group>"; };
+		E4B1E6B62BF5D0CD00ECADFA /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		E4B1E6BC2BF5DC4000ECADFA /* BaedugUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaedugUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B1E6BE2BF5DC4000ECADFA /* BaedugUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaedugUnitTests.swift; sourceTree = "<group>"; };
+		E4B1E6C92BF5DC4500ECADFA /* BaedugUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaedugUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B1E6CB2BF5DC4500ECADFA /* BaedugUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaedugUITests.swift; sourceTree = "<group>"; };
+		E4B1E6CD2BF5DC4500ECADFA /* BaedugUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaedugUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E4D4021F2BB5668C00B4E5C4 /* ChatGPTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatGPTService.swift; sourceTree = "<group>"; };
 		E4D402232BB679F700B4E5C4 /* ApiKeyList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKeyList.plist; sourceTree = "<group>"; };
 		E4D402252BB67A4C00B4E5C4 /* HIDEAPIKEY++Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HIDEAPIKEY++Bundle.swift"; sourceTree = "<group>"; };
 		E4D402282BB68A1800B4E5C4 /* LoginServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceModel.swift; sourceTree = "<group>"; };
 		E4E67CE62B95A2810031DA82 /* MainDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDetailViewController.swift; sourceTree = "<group>"; };
-		E4E67CE82B95A28B0031DA82 /* MainDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDetailViewModel.swift; sourceTree = "<group>"; };
 		E4E67CEB2B95B47A0031DA82 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		E4E67CED2B95B4830031DA82 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		E4E67CF02B95D44A0031DA82 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -78,9 +125,7 @@
 		E4E67CF52B95D6630031DA82 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		E4E67CF82B95DC9F0031DA82 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		E4E67CFB2B95DCAC0031DA82 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
-		E4E67CFE2B95DCD30031DA82 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		E4E67D002B95DD6A0031DA82 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
-		E4E67D082B95E09A0031DA82 /* AddModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModel.swift; sourceTree = "<group>"; };
 		E4E67D0A2B95E3B50031DA82 /* ListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
 		E4E67D0C2B95E3BE0031DA82 /* ListDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewModel.swift; sourceTree = "<group>"; };
 		E4E67D0F2B95E60A0031DA82 /* DetailSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSelectViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +152,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E4B1E6B92BF5DC4000ECADFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4B1E6C62BF5DC4500ECADFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4FF8DC72B9455F700FDBF85 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,26 +208,87 @@
 			path = LoginModel;
 			sourceTree = "<group>";
 		};
+		E4713A6F2C005EAE0044F4C4 /* Heart */ = {
+			isa = PBXGroup;
+			children = (
+				E4713A702C005EB30044F4C4 /* Response */,
+			);
+			path = Heart;
+			sourceTree = "<group>";
+		};
+		E4713A702C005EB30044F4C4 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				E4713A712C005EBF0044F4C4 /* GetHeartResponseModel.swift */,
+				E4713A732C005ECA0044F4C4 /* PostHeartResponseModel.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		E4713A752C005F290044F4C4 /* Heart */ = {
+			isa = PBXGroup;
+			children = (
+				E4713A762C005FB30044F4C4 /* GetHeartNetwork.swift */,
+				E4713A782C005FB90044F4C4 /* PostHeartNetwork.swift */,
+			);
+			path = Heart;
+			sourceTree = "<group>";
+		};
+		E4713A9B2C020BD80044F4C4 /* AddNote */ = {
+			isa = PBXGroup;
+			children = (
+				E4713A9C2C020BF50044F4C4 /* Response */,
+			);
+			path = AddNote;
+			sourceTree = "<group>";
+		};
+		E4713A9C2C020BF50044F4C4 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				E4713A9D2C020BFF0044F4C4 /* AddNoteResponseModel.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		E4713A9F2C020C410044F4C4 /* AddNote */ = {
+			isa = PBXGroup;
+			children = (
+				E4713AA02C020C5A0044F4C4 /* PostNoteNetwork.swift */,
+				E4713AA22C020C610044F4C4 /* GetNoteNetwork.swift */,
+			);
+			path = AddNote;
+			sourceTree = "<group>";
+		};
+		E4713AA42C02FF230044F4C4 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E4713AA72C02FF3B0044F4C4 /* GetDetailNetwork.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E4713AA92C02FF7A0044F4C4 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E4713AAA2C02FF850044F4C4 /* GetDetailResponseModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		E4B1E6AE2BF5C7CB00ECADFA /* Directory */ = {
 			isa = PBXGroup;
 			children = (
 				E4B1E6B02BF5C7D900ECADFA /* Response */,
-				E4B1E6AF2BF5C7D300ECADFA /* Request */,
 			);
 			path = Directory;
-			sourceTree = "<group>";
-		};
-		E4B1E6AF2BF5C7D300ECADFA /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				E4B1E6B12BF5C81000ECADFA /* PostDirectoryRequestModel.swift */,
-			);
-			path = Request;
 			sourceTree = "<group>";
 		};
 		E4B1E6B02BF5C7D900ECADFA /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				E4713AA92C02FF7A0044F4C4 /* Detail */,
+				E4B1E6B12BF5C81000ECADFA /* PostDirectoryRequestModel.swift */,
+				E4713A6D2C0055530044F4C4 /* GetDirectoryResponseModel.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -176,9 +296,28 @@
 		E4B1E6B32BF5C8BE00ECADFA /* Directory */ = {
 			isa = PBXGroup;
 			children = (
+				E4713AA42C02FF230044F4C4 /* Detail */,
 				E4B1E6B42BF5C8CC00ECADFA /* PostDirectoryNetwork.swift */,
+				E4713A6B2C0054CF0044F4C4 /* GetDirectoryNetwork.swift */,
 			);
 			path = Directory;
+			sourceTree = "<group>";
+		};
+		E4B1E6BD2BF5DC4000ECADFA /* BaedugUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				E4B1E6BE2BF5DC4000ECADFA /* BaedugUnitTests.swift */,
+			);
+			path = BaedugUnitTests;
+			sourceTree = "<group>";
+		};
+		E4B1E6CA2BF5DC4500ECADFA /* BaedugUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E4B1E6CB2BF5DC4500ECADFA /* BaedugUITests.swift */,
+				E4B1E6CD2BF5DC4500ECADFA /* BaedugUITestsLaunchTests.swift */,
+			);
+			path = BaedugUITests;
 			sourceTree = "<group>";
 		};
 		E4D402272BB67A5100B4E5C4 /* Key */ = {
@@ -194,7 +333,6 @@
 			isa = PBXGroup;
 			children = (
 				E4E67CE62B95A2810031DA82 /* MainDetailViewController.swift */,
-				E4E67CE82B95A28B0031DA82 /* MainDetailViewModel.swift */,
 			);
 			path = MainDetail;
 			sourceTree = "<group>";
@@ -237,32 +375,16 @@
 			path = List;
 			sourceTree = "<group>";
 		};
-		E4E67CFD2B95DCC90031DA82 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				E4E67D072B95E0930031DA82 /* Add */,
-				E4E67CFE2B95DCD30031DA82 /* ListModel.swift */,
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
 		E4E67D022B95E0250031DA82 /* ListDetail */ = {
 			isa = PBXGroup;
 			children = (
 				E4E67D112B95E6A10031DA82 /* Add */,
 				E4E67D0E2B95E5F60031DA82 /* DetailSelect */,
 				E4E67D0A2B95E3B50031DA82 /* ListDetailViewController.swift */,
+				E4713AAC2C0302680044F4C4 /* ListDetailTableViewCell.swift */,
 				E4E67D0C2B95E3BE0031DA82 /* ListDetailViewModel.swift */,
 			);
 			path = ListDetail;
-			sourceTree = "<group>";
-		};
-		E4E67D072B95E0930031DA82 /* Add */ = {
-			isa = PBXGroup;
-			children = (
-				E4E67D082B95E09A0031DA82 /* AddModel.swift */,
-			);
-			path = Add;
 			sourceTree = "<group>";
 		};
 		E4E67D0E2B95E5F60031DA82 /* DetailSelect */ = {
@@ -295,6 +417,8 @@
 			isa = PBXGroup;
 			children = (
 				E4FF8DCC2B9455F700FDBF85 /* Baedug */,
+				E4B1E6BD2BF5DC4000ECADFA /* BaedugUnitTests */,
+				E4B1E6CA2BF5DC4500ECADFA /* BaedugUITests */,
 				E4FF8DCB2B9455F700FDBF85 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -303,6 +427,8 @@
 			isa = PBXGroup;
 			children = (
 				E4FF8DCA2B9455F700FDBF85 /* Baedug.app */,
+				E4B1E6BC2BF5DC4000ECADFA /* BaedugUnitTests.xctest */,
+				E4B1E6C92BF5DC4500ECADFA /* BaedugUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -366,9 +492,10 @@
 		E4FF8DE72B94579B00FDBF85 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E4713A9B2C020BD80044F4C4 /* AddNote */,
+				E4713A6F2C005EAE0044F4C4 /* Heart */,
 				E4B1E6AE2BF5C7CB00ECADFA /* Directory */,
 				E4480C5E2BA1BB77007119B1 /* LoginModel */,
-				E4E67CFD2B95DCC90031DA82 /* List */,
 				E4E67CF42B95D6580031DA82 /* Chat */,
 				E4FF8E062B9469A700FDBF85 /* Main */,
 			);
@@ -380,6 +507,9 @@
 			children = (
 				E4B1E6A72BF5C4F900ECADFA /* Network.swift */,
 				E4B1E6AC2BF5C6FC00ECADFA /* NetworkProvider.swift */,
+				E4B1E6B62BF5D0CD00ECADFA /* URL.swift */,
+				E4713A9F2C020C410044F4C4 /* AddNote */,
+				E4713A752C005F290044F4C4 /* Heart */,
 				E4B1E6B32BF5C8BE00ECADFA /* Directory */,
 				E411D4DD2B9B060000A3A9FA /* Login */,
 				E411D4DC2B9B05F300A3A9FA /* ChatGPT */,
@@ -418,6 +548,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E4B1E6BB2BF5DC4000ECADFA /* BaedugUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B1E6C22BF5DC4000ECADFA /* Build configuration list for PBXNativeTarget "BaedugUnitTests" */;
+			buildPhases = (
+				E4B1E6B82BF5DC4000ECADFA /* Sources */,
+				E4B1E6B92BF5DC4000ECADFA /* Frameworks */,
+				E4B1E6BA2BF5DC4000ECADFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4B1E6C12BF5DC4000ECADFA /* PBXTargetDependency */,
+			);
+			name = BaedugUnitTests;
+			productName = BaedugUnitTests;
+			productReference = E4B1E6BC2BF5DC4000ECADFA /* BaedugUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E4B1E6C82BF5DC4500ECADFA /* BaedugUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B1E6D12BF5DC4500ECADFA /* Build configuration list for PBXNativeTarget "BaedugUITests" */;
+			buildPhases = (
+				E4B1E6C52BF5DC4500ECADFA /* Sources */,
+				E4B1E6C62BF5DC4500ECADFA /* Frameworks */,
+				E4B1E6C72BF5DC4500ECADFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4B1E6D02BF5DC4500ECADFA /* PBXTargetDependency */,
+			);
+			name = BaedugUITests;
+			productName = BaedugUITests;
+			productReference = E4B1E6C92BF5DC4500ECADFA /* BaedugUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		E4FF8DC92B9455F700FDBF85 /* Baedug */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4FF8DDE2B9455FA00FDBF85 /* Build configuration list for PBXNativeTarget "Baedug" */;
@@ -454,6 +620,14 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					E4B1E6BB2BF5DC4000ECADFA = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = E4FF8DC92B9455F700FDBF85;
+					};
+					E4B1E6C82BF5DC4500ECADFA = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = E4FF8DC92B9455F700FDBF85;
+					};
 					E4FF8DC92B9455F700FDBF85 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -480,11 +654,27 @@
 			projectRoot = "";
 			targets = (
 				E4FF8DC92B9455F700FDBF85 /* Baedug */,
+				E4B1E6BB2BF5DC4000ECADFA /* BaedugUnitTests */,
+				E4B1E6C82BF5DC4500ECADFA /* BaedugUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E4B1E6BA2BF5DC4000ECADFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4B1E6C72BF5DC4500ECADFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4FF8DC82B9455F700FDBF85 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -499,22 +689,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E4B1E6B82BF5DC4000ECADFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B1E6BF2BF5DC4000ECADFA /* BaedugUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4B1E6C52BF5DC4500ECADFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B1E6CE2BF5DC4500ECADFA /* BaedugUITestsLaunchTests.swift in Sources */,
+				E4B1E6CC2BF5DC4500ECADFA /* BaedugUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4FF8DC62B9455F700FDBF85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4E67D092B95E09A0031DA82 /* AddModel.swift in Sources */,
 				E4D402292BB68A1800B4E5C4 /* LoginServiceModel.swift in Sources */,
+				E4713A792C005FB90044F4C4 /* PostHeartNetwork.swift in Sources */,
 				E4E67D1E2B96E5620031DA82 /* ChatServiceModel.swift in Sources */,
 				E4E67CF92B95DC9F0031DA82 /* ListViewController.swift in Sources */,
-				E4E67CFF2B95DCD30031DA82 /* ListModel.swift in Sources */,
+				E4B1E6B72BF5D0CD00ECADFA /* URL.swift in Sources */,
 				E4B1E6A82BF5C4F900ECADFA /* Network.swift in Sources */,
 				E4B1E6B52BF5C8CC00ECADFA /* PostDirectoryNetwork.swift in Sources */,
+				E4713A772C005FB30044F4C4 /* GetHeartNetwork.swift in Sources */,
+				E4713AA12C020C5A0044F4C4 /* PostNoteNetwork.swift in Sources */,
 				E4E67D0D2B95E3BE0031DA82 /* ListDetailViewModel.swift in Sources */,
+				E4713AAD2C0302680044F4C4 /* ListDetailTableViewCell.swift in Sources */,
 				E4E67CEE2B95B4830031DA82 /* TabBarViewModel.swift in Sources */,
 				E4FF8DFC2B945B0800FDBF85 /* LoginViewController.swift in Sources */,
+				E4713A6C2C0054CF0044F4C4 /* GetDirectoryNetwork.swift in Sources */,
+				E4713A722C005EBF0044F4C4 /* GetHeartResponseModel.swift in Sources */,
 				E4FF8E032B945FC400FDBF85 /* Color+Extension.swift in Sources */,
 				E4D402262BB67A4C00B4E5C4 /* HIDEAPIKEY++Bundle.swift in Sources */,
+				E4713A742C005ECA0044F4C4 /* PostHeartResponseModel.swift in Sources */,
 				E4B1E6B22BF5C81000ECADFA /* PostDirectoryRequestModel.swift in Sources */,
 				E4FF8E052B9466BB00FDBF85 /* MainTableViewCell.swift in Sources */,
 				E4FF8DD22B9455F700FDBF85 /* MainViewController.swift in Sources */,
@@ -522,17 +735,21 @@
 				E4D402202BB5668C00B4E5C4 /* ChatGPTService.swift in Sources */,
 				E411D4DF2B9B064F00A3A9FA /* AppleLoginService.swift in Sources */,
 				E4E67D102B95E60A0031DA82 /* DetailSelectViewController.swift in Sources */,
-				E4E67CE92B95A28B0031DA82 /* MainDetailViewModel.swift in Sources */,
+				E4713AA32C020C610044F4C4 /* GetNoteNetwork.swift in Sources */,
 				E4E67D012B95DD6A0031DA82 /* ListTableViewCell.swift in Sources */,
 				E4FF8DCE2B9455F700FDBF85 /* AppDelegate.swift in Sources */,
 				E4FF8E082B9469AF00FDBF85 /* MainModel.swift in Sources */,
+				E4713AA82C02FF3B0044F4C4 /* GetDetailNetwork.swift in Sources */,
 				E4E67D132B95E6AC0031DA82 /* AddViewController.swift in Sources */,
+				E4713A9E2C020BFF0044F4C4 /* AddNoteResponseModel.swift in Sources */,
 				E4E67D182B95F3F60031DA82 /* PersonViewController.swift in Sources */,
 				E4E67CE72B95A2810031DA82 /* MainDetailViewController.swift in Sources */,
 				E4480C602BA1BB87007119B1 /* LoginModel.swift in Sources */,
+				E4713AAB2C02FF850044F4C4 /* GetDetailResponseModel.swift in Sources */,
 				E4E67CF12B95D44A0031DA82 /* ChatViewController.swift in Sources */,
 				E4B1E6AD2BF5C6FC00ECADFA /* NetworkProvider.swift in Sources */,
 				E4E67CF62B95D6630031DA82 /* ChatModel.swift in Sources */,
+				E4713A6E2C0055530044F4C4 /* GetDirectoryResponseModel.swift in Sources */,
 				E4FF8DFE2B945D5C00FDBF85 /* LoginViewModel.swift in Sources */,
 				E4E67D0B2B95E3B50031DA82 /* ListDetailViewController.swift in Sources */,
 				E4E67CFC2B95DCAC0031DA82 /* ListViewModel.swift in Sources */,
@@ -546,6 +763,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E4B1E6C12BF5DC4000ECADFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4FF8DC92B9455F700FDBF85 /* Baedug */;
+			targetProxy = E4B1E6C02BF5DC4000ECADFA /* PBXContainerItemProxy */;
+		};
+		E4B1E6D02BF5DC4500ECADFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E4FF8DC92B9455F700FDBF85 /* Baedug */;
+			targetProxy = E4B1E6CF2BF5DC4500ECADFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		E4FF8DD82B9455FA00FDBF85 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -558,6 +788,84 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E4B1E6C32BF5DC4000ECADFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q653PU93R6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = WEDLE.BaedugUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Baedug.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Baedug";
+			};
+			name = Debug;
+		};
+		E4B1E6C42BF5DC4000ECADFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q653PU93R6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = WEDLE.BaedugUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Baedug.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Baedug";
+			};
+			name = Release;
+		};
+		E4B1E6D22BF5DC4500ECADFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q653PU93R6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = WEDLE.BaedugUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Baedug;
+			};
+			name = Debug;
+		};
+		E4B1E6D32BF5DC4500ECADFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q653PU93R6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = WEDLE.BaedugUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Baedug;
+			};
+			name = Release;
+		};
 		E4FF8DDC2B9455FA00FDBF85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -733,6 +1041,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E4B1E6C22BF5DC4000ECADFA /* Build configuration list for PBXNativeTarget "BaedugUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B1E6C32BF5DC4000ECADFA /* Debug */,
+				E4B1E6C42BF5DC4000ECADFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4B1E6D12BF5DC4500ECADFA /* Build configuration list for PBXNativeTarget "BaedugUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B1E6D22BF5DC4500ECADFA /* Debug */,
+				E4B1E6D32BF5DC4500ECADFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E4FF8DC52B9455F700FDBF85 /* Build configuration list for PBXProject "Baedug" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

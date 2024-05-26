@@ -10,11 +10,11 @@ import RxSwift
 import RxCocoa
 
 final class PostDirectoryNetwork {
-    private let network : Network<PostDirectoryRequestModel>
-    init(network: Network<PostDirectoryRequestModel>) {
+    private let network : Network<PostDirectoryResponseModel>
+    init(network: Network<PostDirectoryResponseModel>) {
         self.network = network
     }
-    public func postDirectory(path: String, params: [String:Any]) -> Observable<PostDirectoryRequestModel> {
+    public func postDirectory(path: String, params: [String:Any]) -> Observable<PostDirectoryResponseModel> {
         return network.postNetwork(path: path, params: params)
     }
 }

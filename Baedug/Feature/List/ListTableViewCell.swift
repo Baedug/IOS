@@ -23,6 +23,7 @@ class ListTableViewCell : UITableViewCell {
     private let titleLabel : UITextView = {
         let label = UITextView()
         label.isEditable = false
+        label.isUserInteractionEnabled = false
         label.textColor = .white
         label.backgroundColor = .customGray
         label.font = UIFont.boldSystemFont(ofSize: 18)
@@ -82,8 +83,8 @@ class ListTableViewCell : UITableViewCell {
             make.top.bottom.equalToSuperview().inset(10)
         }
     }
-    func configure(with model: ListModel) {
-        titleLabel.text = model.title
-        dayLabel.text = model.day
+    func configure(with model: GetDirectoryData) {
+        self.titleLabel.text = model.name
+        self.dayLabel.text = model.createdAt
     }
 }

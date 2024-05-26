@@ -11,21 +11,19 @@ import RxCocoa
 import Alamofire
 import SwiftKeychainWrapper
 class AppleLoginService {
-    static func requestLogin(request : LoginModel) -> Observable<Void> {
+    static func requestLogin(request : LoginModel) -> Observable<LoginServiceModel> {
         return Observable.create { observer in
             let url = "https://baedug.com/login/oauth2/code/apple?code=\(request.authCode)"
             AF.request(url, method: .post, encoding: JSONEncoding.default, headers: ["Content-Type" : "application/json"])
                 .validate()
-                .response() { response in
+                .responseDecodable(of: LoginServiceModel.self) { response in
+                    print(response.debugDescription)
                     switch response.result {
                     case .success(let data):
-                        if let utf8String = String(data: data!, encoding: .utf8) {
-                            print("통신 결과 : \(utf8String)")
-                        } else {
-                            print("Failed to decode UTF-8 string.")
-                        }
+                        observer.onNext(data)
+                        observer.onCompleted()
                     case .failure(let error):
-                        print("Error: \(error)")
+                        observer.onError(error)
                     }
                 }
             return Disposables.create()

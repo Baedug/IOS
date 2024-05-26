@@ -49,6 +49,7 @@ class ListViewController : UIViewController {
     }()
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        listViewModel.InputTrigger.onNext(())
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,15 +90,15 @@ extension ListViewController {
 //MARK: - setBinding
 extension ListViewController {
     private func setBinding() {
-        listViewModel.InputTrigger.accept(())
+        listViewModel.InputTrigger.onNext(())
         listViewModel.ListTable.bind(to: tableView.rx.items(cellIdentifier: "Cell", cellType: ListTableViewCell.self)) { index, model, cell in
             cell.configure(with: model)
             cell.selectionStyle = .none
         }
         .disposed(by: disposeBag)
-        tableView.rx.modelSelected(ListModel.self)
+        tableView.rx.modelSelected(GetDirectoryData.self)
             .subscribe { selectedModel in
-                self.navigationController?.pushViewController(ListDetailViewController(titleText: selectedModel), animated: true)
+                self.navigationController?.pushViewController(ListDetailViewController(directoryData: selectedModel), animated: true)
             }
             .disposed(by: disposeBag)
         addBtn.rx.tap
@@ -115,7 +116,9 @@ extension ListViewController {
             textField.placeholder = "입력.."
         }
         let Ok = UIAlertAction(title: "확인", style: .default){ _ in
-            
+            if let textField = alert.textFields?.first, let textIdentifier = textField.text {
+                self.listViewModel.DirectoryTrigger.onNext(textIdentifier)
+            }
         }
         let Cancle = UIAlertAction(title: "취소", style: .destructive)
         alert.addAction(Ok)

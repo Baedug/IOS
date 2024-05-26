@@ -13,9 +13,8 @@ import SnapKit
 
 class MainDetailViewController : UIViewController {
     private let disposeBag = DisposeBag()
-    private let mainDetailViewModel = MainDetailViewModel()
-    let notes : MainModel
-    init(notes : MainModel) {
+    let notes : MainData
+    init(notes : MainData) {
         self.notes = notes
         super.init(nibName: nil, bundle: nil)
     }
@@ -51,9 +50,8 @@ class MainDetailViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .black
+        self.navigationController?.navigationBar.isHidden = false
         self.title = self.notes.title
-        self.text.text = self.notes.description
-        self.day.text = self.notes.day
         setLayout()
         setBinding()
     }
@@ -83,6 +81,6 @@ extension MainDetailViewController {
 //MARK: - setBinding
 extension MainDetailViewController {
     private func setBinding() {
-        
+        self.text.text = "\(self.notes.title ?? "")\n\n\(self.notes.content ?? "")"
     }
 }

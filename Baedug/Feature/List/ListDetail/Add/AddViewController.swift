@@ -12,7 +12,15 @@ import SnapKit
 
 class AddViewController : UIViewController, UITextViewDelegate {
     private let disposeBag = DisposeBag()
-    
+    private let addViewModel = AddViewModel()
+    var id : String
+    init(id: String) {
+        self.id = id
+        super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     //chatGPT 검색
     private let searchView : UIView = {
         let view = UIView()
@@ -57,7 +65,7 @@ class AddViewController : UIViewController, UITextViewDelegate {
         return text
     }()
     //필기 텍스트
-    private let text : UITextView = {
+    private let contentText : UITextView = {
         let text = UITextView()
         text.isEditable = true
         text.textColor = .gray
@@ -89,10 +97,20 @@ class AddViewController : UIViewController, UITextViewDelegate {
         
         return label
     }()
+    //업로드
+    private let uploadBtn : UIButton = {
+        let view = UIButton()
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 15
+        view.layer.masksToBounds = true
+        view.setTitle("업로드", for: .normal)
+        view.setTitleColor(.black, for: .normal)
+        return view
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .black
-        text.delegate = self
+        contentText.delegate = self
         setLayout()
         setBinding()
     }
@@ -113,14 +131,14 @@ extension AddViewController {
         self.view.addSubview(searchView)
         
         textView.addSubview(titleText)
-        textView.addSubview(text)
+        textView.addSubview(contentText)
         textView.addSubview(day)
         textView.addSubview(heartBtn)
         titleText.snp.makeConstraints { make in
             make.leading.trailing.top.equalToSuperview().inset(20)
             make.height.equalTo(20)
         }
-        text.snp.makeConstraints { make in
+        contentText.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(20)
             make.top.equalTo(titleText.snp.bottom).offset(10)
             make.bottom.equalToSuperview().offset(-40)
@@ -144,7 +162,13 @@ extension AddViewController {
         textView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(20)
             make.top.equalTo(searchView.snp.bottom).offset(30)
-            make.height.equalToSuperview().dividedBy(3)
+            make.height.equalToSuperview().dividedBy(2)
+        }
+        self.view.addSubview(uploadBtn)
+        uploadBtn.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.top.equalTo(textView.snp.bottom).offset(20)
+            make.height.equalTo(50)
         }
     }
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -165,7 +189,29 @@ extension AddViewController {
         heartBtn.rx.tap
             .subscribe { _ in
                 self.heartBtn.setImage(UIImage(named: "heartFill"), for: .normal)
+                self.addViewModel.heartTrigger.onNext((self.id))
             }
             .disposed(by: disposeBag)
+        uploadBtn.rx.tap
+            .subscribe { _ in
+                self.addViewModel.noteTrigger.onNext([self.id, self.titleText.text ?? "", self.contentText.text ?? ""])
+            }
+            .disposed(by: disposeBag)
+        self.addViewModel.noteResult.bind(onNext: {[weak self] result in
+            guard let self = self else { return }
+            if result.header?.resultCode == 201 {
+                DispatchQueue.main.async {
+                    self.Alert(message: "업로드 성공!")
+                }
+            }
+        }).disposed(by: disposeBag)
+    }
+    private func Alert(message : String) {
+        let Alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        let Ok = UIAlertAction(title: "확인", style: .default) { _ in
+            self.navigationController?.popViewController(animated: true)
+        }
+        Alert.addAction(Ok)
+        self.present(Alert, animated: true)
     }
 }

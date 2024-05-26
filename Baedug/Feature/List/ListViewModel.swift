@@ -10,25 +10,44 @@ import RxCocoa
 
 class ListViewModel {
     private let disposeBag = DisposeBag()
-    let InputTrigger = PublishRelay<Void>()
-    let ListTable : BehaviorRelay<[ListModel]> = BehaviorRelay(value: [])
+    private var postDirectoryNetwork : PostDirectoryNetwork
+    private var getDirectoryNetwork : GetDirectoryNetwork
+    
+    //카테고리 불러오기(디렉토리 전체 조회)
+    let InputTrigger = PublishSubject<Void>()
+    let ListTable : PublishSubject<[GetDirectoryData]> = PublishSubject()
+    
+    //Direcotry 만들기
+    let DirectoryTrigger = PublishSubject<String>()
+    let DirectoryResult : PublishSubject<PostDirectoryResponseModel> = PublishSubject()
     
     init() {
+        let provider = NetworkProvider(endpoint: endpointURL)
+        postDirectoryNetwork = provider.postDirectory()
+        getDirectoryNetwork = provider.getDirectory()
+        
         setBinding()
     }
     private func setBinding() {
+        //디렉토리 전체 조회
         InputTrigger.subscribe { _ in
-            let mockData = [
-                ListModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" ,day: "2024-02-29"),
-                ListModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" , day: "2024-03-01"),
-                ListModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" , day: "2024-03-02"),
-                ListModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" ,day: "2024-03-03"),
-                ListModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" ,day: "2024-03-03"),
-                ListModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" ,day: "2024-03-03"),
-                ListModel(title: "인공지능", description: "인공지능에 대한 필기 입니다" ,day: "2024-03-03")
-            ]
-            self.ListTable.accept(mockData)
+            self.getDirectoryNetwork.getDirectoryNetwork(path: getDirectoryURL)
+                .subscribe { result in
+                    if let data = result.element?.body?.data {
+                        self.ListTable.onNext(data)
+                    }
+                }.disposed(by: self.disposeBag)
         }
+        .disposed(by: disposeBag)
+        
+        //디렉토리 생성
+        DirectoryTrigger.flatMapLatest { name in
+            let params : [String:Any] = [
+                "name" : name
+            ]
+            return self.postDirectoryNetwork.postDirectory(path: postDirectoryURL, params: params)
+        }
+        .bind(to: DirectoryResult)
         .disposed(by: disposeBag)
     }
 }

@@ -14,17 +14,17 @@ import SnapKit
 class ListDetailViewController : UIViewController {
     private let disposeBag = DisposeBag()
     private let listDetailViewModel = ListDetailViewModel()
-    let titleText : ListModel
-    init(titleText : ListModel) {
-        self.titleText = titleText
+    let directoryData : GetDirectoryData
+    init(directoryData : GetDirectoryData) {
+        self.directoryData = directoryData
         super.init(nibName: nil, bundle: nil)
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     //필기 생성
-    private let addBtn : UIBarButtonItem = {
-        let btn = UIBarButtonItem(barButtonSystemItem: .add, target: ListDetailViewController.self, action: nil)
+    private lazy var addBtn : UIBarButtonItem = {
+        let btn = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
         btn.tintColor = .white
         return btn
     }()
@@ -43,7 +43,7 @@ class ListDetailViewController : UIViewController {
         view.backgroundColor = .black
         view.separatorStyle = .none
         view.clipsToBounds = true
-        view.register(ListTableViewCell.self, forCellReuseIdentifier: "Cell")
+        view.register(ListDetailTableViewCell.self, forCellReuseIdentifier: "Cell")
         return view
     }()
     //로딩인디케이터
@@ -53,10 +53,16 @@ class ListDetailViewController : UIViewController {
         view.color = .white
         return view
     }()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        listDetailViewModel.noteListTrigger.onNext((directoryData.id ?? 0))
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.isHidden = false
         self.view.backgroundColor = .black
-        self.title = titleText.title
+        self.title = directoryData.name
         self.navigationItem.rightBarButtonItem = addBtn
         setLayout()
         setBinding()
@@ -89,21 +95,20 @@ extension ListDetailViewController {
 //MARK: - setBinding
 extension ListDetailViewController {
     private func setBinding() {
-        listDetailViewModel.InputTrigger.accept(())
-        listDetailViewModel.ListTable.bind(to: tableView.rx.items(cellIdentifier: "Cell", cellType: ListTableViewCell.self)) { index, model, cell in
+        listDetailViewModel.noteListTrigger.onNext(directoryData.id ?? 0)
+        listDetailViewModel.noteListResult.bind(to: tableView.rx.items(cellIdentifier: "Cell", cellType: ListDetailTableViewCell.self)) { index, model, cell in
+            self.loadingIndicator.stopAnimating()
             cell.configure(with: model)
             cell.selectionStyle = .none
-        }
-        .disposed(by: disposeBag)
-        tableView.rx.modelSelected(ListModel.self)
+        }.disposed(by: disposeBag)
+        tableView.rx.modelSelected(GetDetailData.self)
             .subscribe { selectedModel in
                 self.navigationController?.pushViewController(DetailSelectViewController(notes: selectedModel), animated: true)
             }
             .disposed(by: disposeBag)
         addBtn.rx.tap
-            .subscribe { _ in
-                self.navigationController?.pushViewController(AddViewController(), animated: true)
-            }
-            .disposed(by: disposeBag)
+            .bind { _ in
+                self.navigationController?.pushViewController(AddViewController(id: "\(self.directoryData.id ?? 0)"), animated: true)
+            }.disposed(by: disposeBag)
     }
 }

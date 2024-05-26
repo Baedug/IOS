@@ -63,6 +63,7 @@ class MainViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.tabBarController?.tabBar.isHidden = false
+        mainViewModel.InputTrigger.onNext(())
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,13 +113,13 @@ extension MainViewController {
 //MARK: - setBinding
 extension MainViewController {
     private func setBinding() {
-        mainViewModel.InputTrigger.accept(())
+        mainViewModel.InputTrigger.onNext(())
         mainViewModel.MainTable.bind(to: tableView.rx.items(cellIdentifier: "Cell", cellType: MainTableViewCell.self)) { index, model, cell in
             cell.configure(with: model)
             cell.selectionStyle = .none
         }
         .disposed(by: disposeBag)
-        tableView.rx.modelSelected(MainModel.self)
+        tableView.rx.modelSelected(MainData.self)
             .subscribe { selectedModel in
                 self.navigationController?.pushViewController(MainDetailViewController(notes: selectedModel), animated: true)
             }

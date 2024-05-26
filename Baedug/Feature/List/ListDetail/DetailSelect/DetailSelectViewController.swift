@@ -15,8 +15,8 @@ import SnapKit
 class DetailSelectViewController : UIViewController {
     private let disposeBag = DisposeBag()
     private let listDetailViewModel = ListDetailViewModel()
-    let notes : ListModel
-    init(notes : ListModel) {
+    let notes : GetDetailData
+    init(notes : GetDetailData) {
         self.notes = notes
         super.init(nibName: nil, bundle: nil)
     }
@@ -38,6 +38,7 @@ class DetailSelectViewController : UIViewController {
         text.font = UIFont.boldSystemFont(ofSize: 18)
         text.textAlignment = .left
         text.backgroundColor = .customYellow
+        text.isUserInteractionEnabled = false
         return text
     }()
     //필기 날짜
@@ -52,9 +53,7 @@ class DetailSelectViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .black
-        self.title = self.notes.title
-        self.text.text = self.notes.description
-        self.day.text = self.notes.day
+        self.title = notes.title
         setLayout()
         setBinding()
     }
@@ -84,6 +83,6 @@ extension DetailSelectViewController {
 //MARK: - setBinding
 extension DetailSelectViewController {
     private func setBinding() {
-        
+        self.text.text = "\(notes.title ?? "")\n\n\(notes.content ?? "")"
     }
 }

@@ -75,6 +75,12 @@ extension LoginViewController {
                 self?.handleAppleSignInButtonPress()
             })
             .disposed(by: disposeBag)
+        loginViewModel.loginSuccess.bind(onNext: {[weak self] result in
+            guard let self = self else { return }
+            if result == true{
+                self.navigationController?.pushViewController(TabBarViewController(), animated: true)
+            }
+        }).disposed(by: disposeBag)
     }
 }
 //MARK: - AppleLogin
@@ -104,7 +110,6 @@ extension LoginViewController : ASAuthorizationControllerDelegate, ASAuthorizati
                     self.loadingIndicator.stopAnimating()
                 }
             }else{}
-            self.navigationController?.pushViewController(TabBarViewController(), animated: true)
         }
     }
     

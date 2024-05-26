@@ -1,17 +1,16 @@
 //
-//  MainTableViewCell.swift
+//  ListDetailTableViewCell.swift
 //  Baedug
 //
-//  Created by 정성윤 on 2024/03/03.
+//  Created by 정성윤 on 2024/05/26.
 //
-
 import Foundation
 import RxSwift
 import RxCocoa
 import SnapKit
 import UIKit
 
-class MainTableViewCell : UITableViewCell {
+class ListDetailTableViewCell : UITableViewCell {
     //전체 뷰
     private let totalView : UIView = {
         let view = UIView()
@@ -20,11 +19,12 @@ class MainTableViewCell : UITableViewCell {
         return view
     }()
     //제목
-    private let titleLabel : UITextField = {
-        let label = UITextField()
-        label.isEnabled = false
+    private let titleLabel : UITextView = {
+        let label = UITextView()
+        label.isEditable = false
         label.textColor = .white
         label.backgroundColor = .customGray
+        label.isUserInteractionEnabled = false
         label.font = UIFont.boldSystemFont(ofSize: 18)
         return label
     }()
@@ -67,7 +67,7 @@ class MainTableViewCell : UITableViewCell {
         titleLabel.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(20)
             make.height.equalTo(30)
-            make.top.equalToSuperview().inset(30)
+            make.top.equalToSuperview().offset(30)
         }
         dayLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(15)
@@ -83,7 +83,7 @@ class MainTableViewCell : UITableViewCell {
             make.top.bottom.equalToSuperview().inset(10)
         }
     }
-    func configure(with model: MainData) {
-        titleLabel.text = model.title
+    func configure(with model: GetDetailData) {
+        self.titleLabel.text = model.title
     }
 }

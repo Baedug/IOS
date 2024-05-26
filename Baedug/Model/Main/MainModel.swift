@@ -6,8 +6,20 @@
 //
 
 import Foundation
-struct MainModel {
-    let title : String
-    let description : String
-    let day : String
+struct MainResponseModel : Codable {
+    let header : MainHeader?
+    let body : MainBody?
 }
+struct MainHeader : Codable {
+    let resultCode : Int?
+    let message : String?
+}
+struct MainBody : Codable {
+    let data : [MainData]?
+    let message : String?
+}
+struct MainData : Codable {
+    let title : String?
+    let content : String?
+}
+
